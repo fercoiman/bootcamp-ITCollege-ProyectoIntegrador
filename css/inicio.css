@@ -1,42 +1,240 @@
-main {
-    height: 2500px;
-    min-height: 2500px;
-    background-color: #689;
-    padding: 25px;
+/* Estilos específicos para la página de inicio */
+
+/* Header de la sección de productos */
+.section-cards-header {
     text-align: center;
-}
-
-section img {
-    width: 100px;
-    margin-bottom: 15px;
-}
-
-section {
-    border: 1px dashed yellow;
-    width: 350px;
-    padding: 15px;
-    background-color: #943;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 16px;
     color: white;
-    margin: 25px;
-    border-radius: 15px;
+    box-shadow: var(--shadow-xl);
 }
 
-section h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-decoration: underline;
-}
-
-main .section-cards-header h1 {
+.section-cards-header h1 {
     color: white;
-    margin-bottom: 40px;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-main .section-cards-body {
-    display: flex;
+/* Contenedor de las tarjetas de productos */
+.section-cards-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Estilos para las tarjetas de productos */
+.section-cards-body section {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+    border: 1px solid var(--neutral-200);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-cards-body section:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-light);
+}
+
+.section-cards-body section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Imágenes de productos */
+.section-cards-body section img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto 1.5rem;
+    display: block;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+}
+
+.section-cards-body section:hover img {
+    transform: scale(1.05);
+}
+
+/* Títulos de productos */
+.section-cards-body section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--neutral-800);
+    margin-bottom: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Información de productos */
+.section-cards-body section p {
+    color: var(--neutral-600);
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Precios */
+.section-cards-body section .precio {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: linear-gradient(135deg, var(--secondary-light), var(--neutral-100));
+    border-radius: 8px;
+}
+
+/* Botones de acción */
+.section-cards-body section button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.875rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.section-cards-body section button.agregar-carrito {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+}
+
+.section-cards-body section button.agregar-carrito:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    transform: translateY(-2px);
+}
+
+.section-cards-body section button.ver-detalle {
+    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
+    color: white;
+}
+
+.section-cards-body section button.ver-detalle:hover {
+    background: linear-gradient(135deg, var(--secondary-dark), var(--secondary-color));
+    transform: translateY(-2px);
+}
+
+/* Estados de stock */
+.section-cards-body section .stock {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section-cards-body section .stock.disponible {
+    background: var(--success-color);
+    color: white;
+}
+
+.section-cards-body section .stock.agotado {
+    background: var(--error-color);
+    color: white;
+}
+
+.section-cards-body section .stock.limitado {
+    background: var(--warning-color);
+    color: white;
+}
+
+/* Categorías */
+.section-cards-body section .categoria {
+    display: inline-block;
+    background: var(--neutral-100);
+    color: var(--neutral-600);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Marca */
+.section-cards-body section .marca {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Detalles */
+.section-cards-body section .detalles {
+    color: var(--neutral-500);
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* Envío gratuito */
+.section-cards-body section .envio-gratis {
+    background: linear-gradient(135deg, var(--success-color), var(--success-color));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem 0;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .section-cards-header h1 {
+        font-size: 2rem;
+    }
     
-    /* flex-wrap: nowrap; */
-    flex-wrap: wrap;
+    .section-cards-body {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    .section-cards-body section {
+        padding: 1.5rem;
+    }
+    
+    .section-cards-body section img {
+        width: 100px;
+        height: 100px;
+    }
+}
 
-    justify-content: space-evenly;
+@media (max-width: 480px) {
+    .section-cards-header {
+        padding: 1.5rem 1rem;
+    }
+    
+    .section-cards-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .section-cards-body section {
+        padding: 1rem;
+    }
 }

@@ -35,6 +35,82 @@
 
     <main>
         <h1>Contacto</h1>
+        
+        <!-- Formulario de contacto -->
+        <form class="contacto-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="50" placeholder="Ingresa tu nombre completo">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9+\-\s()]+" placeholder="+34 123 456 789">
+            </div>
+            
+            <div class="form-group">
+                <label for="asunto">Asunto *</label>
+                <input type="text" id="asunto" name="asunto" required minlength="5" maxlength="100" placeholder="¿En qué podemos ayudarte?">
+            </div>
+            
+            <div class="form-group">
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje" name="mensaje" required minlength="10" maxlength="1000" placeholder="Describe tu consulta o mensaje aquí..."></textarea>
+            </div>
+            
+            <button type="submit">Enviar mensaje</button>
+        </form>
+
+        <!-- Información de contacto -->
+        <div class="contacto-info">
+            <h2>Información de contacto</h2>
+            
+            <div class="info-item">
+                <i>📍</i>
+                <div class="info-content">
+                    <h3>Dirección</h3>
+                    <p>Calle Principal 123, Ciudad, CP 12345</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i>📞</i>
+                <div class="info-content">
+                    <h3>Teléfono</h3>
+                    <p>+34 123 456 789</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i>✉️</i>
+                <div class="info-content">
+                    <h3>Email</h3>
+                    <p>info@ecommerce.com</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i>🕒</i>
+                <div class="info-content">
+                    <h3>Horario de atención</h3>
+                    <p>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mapa o ubicación -->
+        <div class="contacto-mapa">
+            <h2>Nuestra ubicación</h2>
+            <div class="mapa-placeholder">
+                <p>Mapa interactivo de ubicación</p>
+                <p>Aquí se mostraría un mapa de Google Maps o similar</p>
+            </div>
+        </div>
     </main>
 
     <footer>

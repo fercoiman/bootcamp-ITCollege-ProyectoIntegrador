@@ -1,0 +1,426 @@
+/* Estilos específicos para la página de nosotros */
+
+/* Contenedor principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+main h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hero section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.hero-section h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sección de valores */
+.valores-section {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--neutral-200);
+    margin-bottom: 3rem;
+}
+
+.valores-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.valor-item {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, var(--neutral-50), var(--neutral-100));
+    border-radius: 12px;
+    border: 1px solid var(--neutral-200);
+    transition: all 0.3s ease;
+}
+
+.valor-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.valor-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.valor-item h3 {
+    color: var(--neutral-800);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.valor-item p {
+    color: var(--neutral-600);
+    line-height: 1.6;
+}
+
+/* Sección del equipo */
+.equipo-section {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--neutral-200);
+    margin-bottom: 3rem;
+}
+
+.equipo-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.miembro-equipo {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--neutral-50), var(--neutral-100));
+    border-radius: 12px;
+    border: 1px solid var(--neutral-200);
+    transition: all 0.3s ease;
+}
+
+.miembro-equipo:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-light);
+}
+
+.miembro-equipo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    border: 4px solid white;
+    box-shadow: var(--shadow-md);
+}
+
+.miembro-equipo h3 {
+    color: var(--neutral-800);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.miembro-equipo .cargo {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.miembro-equipo p {
+    color: var(--neutral-600);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Sección de historia */
+.historia-section {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--neutral-200);
+    margin-bottom: 3rem;
+}
+
+.historia-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    width: 45%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 55%;
+    text-align: left;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: var(--shadow-sm);
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -8px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -8px;
+}
+
+.timeline-content {
+    background: linear-gradient(135deg, var(--neutral-50), var(--neutral-100));
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--neutral-200);
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.timeline-content .fecha {
+    color: var(--neutral-500);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    color: var(--neutral-600);
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* Sección de contacto */
+.contacto-section {
+    background: linear-gradient(135deg, var(--neutral-50), var(--neutral-100));
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--neutral-200);
+    text-align: center;
+}
+
+.contacto-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.contacto-section p {
+    color: var(--neutral-600);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-contacto {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-contacto:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    .hero-section,
+    .valores-section,
+    .equipo-section,
+    .historia-section,
+    .contacto-section {
+        padding: 2rem 1rem;
+    }
+    
+    main h1,
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+    
+    .valores-section h2,
+    .equipo-section h2,
+    .historia-section h2,
+    .contacto-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left;
+        padding-left: 50px;
+    }
+    
+    .timeline-item::before {
+        left: 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+    
+    .hero-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .valores-grid,
+    .equipo-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .valor-item,
+    .miembro-equipo {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.valores-section {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.equipo-section {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.historia-section {
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.contacto-section {
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+/* Hover effects mejorados */
+.valor-item:hover i,
+.miembro-equipo:hover img {
+    transform: scale(1.1);
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}

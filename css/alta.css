@@ -1,100 +1,281 @@
+/* Estilos específicos para la página de alta de productos */
+
+/* Contenedor principal */
 main {
-    height: auto;
-    padding: 20px;
-    background-color: #ddd;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 main h1 {
     text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/* -------------------------------- */
-/*     Maquetado del formulario     */
-/* -------------------------------- */
+/* Formulario de alta */
 .alta-form {
-    background-color: #b63625;
-    width: 80%;
-    margin: 20px auto;
-    padding: 30px;
-    color: white;
-    border-radius: 20px;
-    border: 1px dashed yellow;
-    /* display: none; */
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--neutral-200);
+    margin-bottom: 3rem;
 }
 
+/* Grupos de campos */
 .input-group {
-    text-align: center;
-    padding: 3px;
-    /* border: 1px solid cyan; */
+    margin-bottom: 1.5rem;
+    position: relative;
 }
 
-main label {
-    color: #badc58;
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--neutral-700);
+    font-size: 0.95rem;
     text-transform: capitalize;
-    display: block;
-    margin-bottom: 5px;
-
 }
 
-main label[for="envio"] {
-    display: inline-block;
-    margin: 10px 0;
+.input-group input[type="text"],
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--neutral-200);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: white;
+    color: var(--neutral-800);
 }
 
-main button {
-    /* text-align: center; */
-    width: 40%;
-    height: 40px;
-    
-    display: block;
-    margin: 15px auto;
-
-    background-color: #6ab04c;
-    color: #130f40;
-    font-size: 20px;
-    border-radius: 5px;
+.input-group input[type="text"]:focus,
+.input-group input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    transform: translateY(-1px);
 }
 
-main input {
-    width: 70%;
-    height: 30px;
-    border-radius: 5px;
-    font-size: 18px;
-    background-color: #95afc0;
+.input-group input[type="text"]:valid,
+.input-group input[type="number"]:valid {
+    border-color: var(--success-color);
 }
 
-main input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
+.input-group input[type="text"]:invalid:not(:placeholder-shown),
+.input-group input[type="number"]:invalid:not(:placeholder-shown) {
+    border-color: var(--error-color);
 }
 
-/* -------------------------------- */
-/*      Maquetado de la tabla       */
-/* -------------------------------- */
-th, td {
-    border: 1px solid black;
-    width: 80px;
-    height: 30px;
-    padding: 10px;
+/* Campo de select */
+.input-group select {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--neutral-200);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: white;
+    color: var(--neutral-800);
+    cursor: pointer;
 }
 
-th {
-    text-transform: uppercase;
-    background-color: #111;
-    color: white;
+.input-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    transform: translateY(-1px);
 }
 
-table {
-    border-collapse: collapse;
-    margin: 5px auto;
+/* Campo de textarea */
+.input-group textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--neutral-200);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: white;
+    color: var(--neutral-800);
+    font-family: inherit;
+    resize: vertical;
+    min-height: 100px;
 }
 
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Campo de checkbox */
+.input-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+    transform: scale(1.2);
+    accent-color: var(--primary-color);
+}
+
+.input-group input[type="checkbox"] + label {
+    display: inline;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+/* Mensajes de error */
+.error-detail {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    min-height: 1.2rem;
+    font-weight: 500;
+}
+
+/* Botón de envío */
+.alta-form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.alta-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+}
+
+/* Separador */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neutral-300), transparent);
+    margin: 3rem 0;
+}
+
+/* Sección de lista de productos */
 main h2 {
     text-align: center;
+    color: var(--neutral-700);
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
-.centrar {
-    text-align: center;
+/* Tabla de productos */
+table {
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--neutral-200);
+}
+
+table thead {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+}
+
+table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--neutral-200);
+    color: var(--neutral-700);
+}
+
+table tbody tr:hover {
+    background-color: var(--neutral-50);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    .alta-form {
+        padding: 1.5rem;
+    }
+    
+    main h1 {
+        font-size: 2rem;
+    }
+    
+    main h2 {
+        font-size: 1.5rem;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    table th,
+    table td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .alta-form {
+        padding: 1rem;
+    }
+    
+    main h1 {
+        font-size: 1.75rem;
+    }
+    
+    .input-group input[type="text"],
+    .input-group input[type="number"] {
+        font-size: 16px; /* Evita zoom en iOS */
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alta-form {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Estados de validación visual */
+.input-group input:required:invalid {
+    border-color: var(--error-color);
+}
+
+.input-group input:required:valid {
+    border-color: var(--success-color);
+}
+
+/* Placeholder styling */
+.input-group input::placeholder {
+    color: var(--neutral-400);
+    font-style: italic;
 }
 
 

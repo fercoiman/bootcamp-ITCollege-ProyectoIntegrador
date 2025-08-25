@@ -35,6 +35,107 @@
 
     <main>
         <h1>Carrito de Compras</h1>
+        
+        <!-- Contenedor principal del carrito -->
+        <div class="carrito-container">
+            <!-- Lista de productos del carrito -->
+            <div class="carrito-productos">
+                <h2>Productos en el carrito</h2>
+                
+                <!-- Producto 1 -->
+                <div class="producto-carrito">
+                    <img src="https://via.placeholder.com/80x80/6366f1/ffffff?text=P" alt="Producto 1">
+                    <div class="producto-info">
+                        <h3>Smartphone XYZ</h3>
+                        <div class="marca">Marca: TechCorp</div>
+                        <div class="categoria">Electrónica</div>
+                    </div>
+                    <div class="cantidad-controls">
+                        <button type="button">-</button>
+                        <input type="number" value="1" min="1" max="10">
+                        <button type="button">+</button>
+                    </div>
+                    <div class="precio-producto">€299.99</div>
+                    <button class="btn-eliminar">Eliminar</button>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="producto-carrito">
+                    <img src="https://via.placeholder.com/80x80/10b981/ffffff?text=P" alt="Producto 2">
+                    <div class="producto-info">
+                        <h3>Auriculares Pro</h3>
+                        <div class="marca">Marca: AudioTech</div>
+                        <div class="categoria">Electrónica</div>
+                    </div>
+                    <div class="cantidad-controls">
+                        <button type="button">-</button>
+                        <input type="number" value="2" min="1" max="10">
+                        <button type="button">+</button>
+                    </div>
+                    <div class="precio-producto">€89.99</div>
+                    <button class="btn-eliminar">Eliminar</button>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="producto-carrito">
+                    <img src="https://via.placeholder.com/80x80/f59e0b/ffffff?text=P" alt="Producto 3">
+                    <div class="producto-info">
+                        <h3>Camiseta Deportiva</h3>
+                        <div class="marca">Marca: SportFit</div>
+                        <div class="categoria">Ropa</div>
+                    </div>
+                    <div class="cantidad-controls">
+                        <button type="button">-</button>
+                        <input type="number" value="1" min="1" max="10">
+                        <button type="button">+</button>
+                    </div>
+                    <div class="precio-producto">€24.99</div>
+                    <button class="btn-eliminar">Eliminar</button>
+                </div>
+            </div>
+            
+            <!-- Resumen del carrito -->
+            <div class="carrito-resumen">
+                <h2>Resumen del pedido</h2>
+                
+                <div class="resumen-detalle">
+                    <span class="label">Subtotal (4 items)</span>
+                    <span class="valor">€504.96</span>
+                </div>
+                
+                <div class="resumen-detalle">
+                    <span class="label">Envío</span>
+                    <span class="valor">€9.99</span>
+                </div>
+                
+                <div class="resumen-detalle">
+                    <span class="label">Impuestos</span>
+                    <span class="valor">€25.25</span>
+                </div>
+                
+                <div class="resumen-detalle">
+                    <span class="label">Total</span>
+                    <span class="valor">€540.20</span>
+                </div>
+                
+                <button class="btn-checkout">Proceder al pago</button>
+                
+                <div style="margin-top: 1rem; text-align: center;">
+                    <small style="color: var(--neutral-500);">
+                        * Los precios incluyen IVA<br>
+                        * Envío gratuito en pedidos superiores a €50
+                    </small>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carrito vacío (oculto por defecto) -->
+        <div class="carrito-vacio" style="display: none;">
+            <i>🛒</i>
+            <h2>Tu carrito está vacío</h2>
+            <p>Parece que aún no has agregado productos a tu carrito de compras.</p>
+            <a href="./index.html" class="btn-continuar">Continuar comprando</a>
+        </div>
     </main>
 
     <footer>
