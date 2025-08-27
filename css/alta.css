@@ -1,4 +1,4 @@
-/* Estilos específicos para la página de alta de productos */
+/* Estilos específicos para la página de alta de productos (sin degradados) */
 
 /* Contenedor principal */
 main {
@@ -9,13 +9,9 @@ main {
 
 main h1 {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--primary-dark);
     margin-bottom: 2rem;
     font-size: 2.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 /* Formulario de alta */
@@ -44,7 +40,9 @@ main h1 {
 }
 
 .input-group input[type="text"],
-.input-group input[type="number"] {
+.input-group input[type="number"],
+.input-group select,
+.input-group textarea {
     width: 100%;
     padding: 0.875rem 1rem;
     border: 2px solid var(--neutral-200);
@@ -55,11 +53,18 @@ main h1 {
     color: var(--neutral-800);
 }
 
+.input-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
 .input-group input[type="text"]:focus,
-.input-group input[type="number"]:focus {
+.input-group input[type="number"]:focus,
+.input-group select:focus,
+.input-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgb(82 109 130 / 0.15);
     transform: translateY(-1px);
 }
 
@@ -73,48 +78,6 @@ main h1 {
     border-color: var(--error-color);
 }
 
-/* Campo de select */
-.input-group select {
-    width: 100%;
-    padding: 0.875rem 1rem;
-    border: 2px solid var(--neutral-200);
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    background-color: white;
-    color: var(--neutral-800);
-    cursor: pointer;
-}
-
-.input-group select:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-    transform: translateY(-1px);
-}
-
-/* Campo de textarea */
-.input-group textarea {
-    width: 100%;
-    padding: 0.875rem 1rem;
-    border: 2px solid var(--neutral-200);
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    background-color: white;
-    color: var(--neutral-800);
-    font-family: inherit;
-    resize: vertical;
-    min-height: 100px;
-}
-
-.input-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-    transform: translateY(-1px);
-}
-
 /* Campo de checkbox */
 .input-group input[type="checkbox"] {
     width: auto;
@@ -123,7 +86,7 @@ main h1 {
     accent-color: var(--primary-color);
 }
 
-.input-group input[type="checkbox"] + label {
+.input-group input[type="checkbox"]+label {
     display: inline;
     margin-bottom: 0;
     cursor: pointer;
@@ -145,7 +108,8 @@ main h1 {
     font-size: 1.1rem;
     font-weight: 600;
     margin-top: 1rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    background: var(--primary-color);
+    color: white;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
@@ -153,14 +117,13 @@ main h1 {
 .alta-form button:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
 }
 
 /* Separador */
 hr {
     border: none;
     height: 2px;
-    background: linear-gradient(90deg, transparent, var(--neutral-300), transparent);
+    background: var(--neutral-200);
     margin: 3rem 0;
 }
 
@@ -183,7 +146,7 @@ table {
 }
 
 table thead {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    background: var(--primary-dark);
     color: white;
 }
 
@@ -209,23 +172,23 @@ table tbody tr:hover {
     main {
         padding: 1rem;
     }
-    
+
     .alta-form {
         padding: 1.5rem;
     }
-    
+
     main h1 {
         font-size: 2rem;
     }
-    
+
     main h2 {
         font-size: 1.5rem;
     }
-    
+
     table {
         font-size: 0.9rem;
     }
-    
+
     table th,
     table td {
         padding: 0.75rem 0.5rem;
@@ -236,23 +199,24 @@ table tbody tr:hover {
     .alta-form {
         padding: 1rem;
     }
-    
+
     main h1 {
         font-size: 1.75rem;
     }
-    
+
     .input-group input[type="text"],
     .input-group input[type="number"] {
-        font-size: 16px; /* Evita zoom en iOS */
+        font-size: 16px;
     }
 }
 
-/* Animaciones */
+/* Animación discreta */
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -272,16 +236,8 @@ table tbody tr:hover {
     border-color: var(--success-color);
 }
 
-/* Placeholder styling */
+/* Placeholder */
 .input-group input::placeholder {
     color: var(--neutral-400);
     font-style: italic;
 }
-
-
-
-
-
-
-
-

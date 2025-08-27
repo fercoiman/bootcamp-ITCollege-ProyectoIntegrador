@@ -1,4 +1,4 @@
-/* Estilos específicos para la página "otra" */
+/* Estilos específicos para la página "otra" (sin degradados) */
 
 /* Contenedor principal */
 main {
@@ -9,13 +9,9 @@ main {
 
 main h1 {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--primary-dark);
     margin-bottom: 2rem;
     font-size: 2.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 /* Sección de características */
@@ -29,10 +25,13 @@ main h1 {
 }
 
 .features-section h2 {
-    color: var(--primary-color);
+    background: var(--brand-soft);
+    color: #FFFFFF;
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
 }
 
 .features-grid {
@@ -42,7 +41,7 @@ main h1 {
 }
 
 .feature-card {
-    background: linear-gradient(135deg, var(--neutral-50), var(--neutral-100));
+    background: var(--neutral-50);
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid var(--neutral-200);
@@ -58,7 +57,7 @@ main h1 {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-light);
 }
 
 .feature-card:hover {
@@ -113,7 +112,7 @@ main h1 {
 
 /* Sección de estadísticas */
 .stats-section {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-dark);
     color: white;
     padding: 3rem 2rem;
     border-radius: 16px;
@@ -123,19 +122,8 @@ main h1 {
     overflow: hidden;
 }
 
-.stats-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
-    opacity: 0.3;
-}
-
 .stats-section h2 {
-    color: white;
+    color: #FFFFFF;
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2rem;
@@ -154,9 +142,9 @@ main h1 {
 .stat-item {
     text-align: center;
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 12px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -169,7 +157,7 @@ main h1 {
 
 .stat-item .stat-label {
     font-size: 0.9rem;
-    opacity: 0.9;
+    opacity: 0.95;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -185,10 +173,13 @@ main h1 {
 }
 
 .testimonials-section h2 {
-    color: var(--primary-color);
+    background: var(--brand-soft);
+    color: #FFFFFF;
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
 }
 
 .testimonials-grid {
@@ -198,7 +189,7 @@ main h1 {
 }
 
 .testimonial-card {
-    background: linear-gradient(135deg, var(--neutral-50), var(--neutral-100));
+    background: var(--neutral-50);
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid var(--neutral-200);
@@ -260,7 +251,7 @@ main h1 {
 
 /* Sección de CTA */
 .cta-section {
-    background: linear-gradient(135deg, var(--neutral-800), var(--neutral-900));
+    background: var(--neutral-800);
     color: white;
     padding: 4rem 2rem;
     border-radius: 16px;
@@ -269,7 +260,7 @@ main h1 {
 }
 
 .cta-section h2 {
-    color: white;
+    color: #FFFFFF;
     margin-bottom: 1rem;
     font-size: 2.5rem;
 }
@@ -291,8 +282,8 @@ main h1 {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    color: white;
+    background: var(--brand-soft);
+    color: var(--primary-dark);
     padding: 1rem 2rem;
     border-radius: 8px;
     font-size: 1.1rem;
@@ -331,37 +322,37 @@ main h1 {
     main {
         padding: 1rem;
     }
-    
+
     .features-section,
     .stats-section,
     .testimonials-section,
     .cta-section {
         padding: 2rem 1rem;
     }
-    
+
     main h1,
     .cta-section h2 {
         font-size: 2rem;
     }
-    
+
     .features-section h2,
     .stats-section h2,
     .testimonials-section h2 {
         font-size: 1.5rem;
     }
-    
+
     .features-grid,
     .stats-grid,
     .testimonials-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .btn-primary,
     .btn-secondary {
         width: 100%;
@@ -371,19 +362,20 @@ main h1 {
 }
 
 @media (max-width: 480px) {
+
     .feature-card,
     .testimonial-card {
         padding: 1.5rem;
     }
-    
+
     .stat-item {
         padding: 1rem;
     }
-    
+
     .stat-item .stat-number {
         font-size: 2rem;
     }
-    
+
     .cta-section h2 {
         font-size: 1.75rem;
     }
@@ -395,6 +387,7 @@ main h1 {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -417,7 +410,7 @@ main h1 {
     animation: slideInUp 0.8s ease-out 0.6s both;
 }
 
-/* Hover effects mejorados */
+/* Hover */
 .feature-card:hover i {
     transform: scale(1.1);
 }
@@ -427,7 +420,6 @@ main h1 {
     opacity: 0.3;
 }
 
-/* Transiciones suaves */
 .feature-card *,
 .testimonial-card * {
     transition: all 0.3s ease;

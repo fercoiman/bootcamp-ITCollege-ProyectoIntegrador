@@ -5,18 +5,17 @@
     text-align: center;
     margin-bottom: 3rem;
     padding: 2rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--brand-soft);
     border-radius: 16px;
-    color: white;
+    color: #FFFFFF;
     box-shadow: var(--shadow-xl);
 }
 
 .section-cards-header h1 {
-    color: white;
+    color: #FFFFFF;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Contenedor de las tarjetas de productos */
@@ -52,7 +51,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-light);
 }
 
 /* Imágenes de productos */
@@ -75,10 +74,12 @@
 .section-cards-body section h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--neutral-800);
+    color: var(--primary-dark);
     margin-bottom: 1rem;
     text-align: center;
-    text-decoration: none;
+    background: var(--brand-soft);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
 }
 
 /* Información de productos */
@@ -93,11 +94,11 @@
 .section-cards-body section .precio {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--secondary-color);
+    color: var(--primary-dark);
     text-align: center;
     margin: 1rem 0;
     padding: 0.5rem;
-    background: linear-gradient(135deg, var(--secondary-light), var(--neutral-100));
+    background: var(--brand-soft);
     border-radius: 8px;
 }
 
@@ -107,30 +108,17 @@
     margin-top: 1rem;
     padding: 0.875rem;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     border-radius: 8px;
     transition: all 0.3s ease;
+    background: var(--brand-soft);
+    color: var(--primary-dark);
 }
 
-.section-cards-body section button.agregar-carrito {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    color: white;
-}
-
-.section-cards-body section button.agregar-carrito:hover {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
-    transform: translateY(-2px);
-}
-
-.section-cards-body section button.ver-detalle {
-    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
-    color: white;
-}
-
-.section-cards-body section button.ver-detalle:hover {
-    background: linear-gradient(135deg, var(--secondary-dark), var(--secondary-color));
-    transform: translateY(-2px);
-}
+.section-cards-body section button.agregar-carrito { background: var(--brand-soft); color: var(--primary-dark); }
+.section-cards-body section button.agregar-carrito:hover { transform: translateY(-2px); }
+.section-cards-body section button.ver-detalle { background: var(--brand-soft); color: var(--primary-dark); }
+.section-cards-body section button.ver-detalle:hover { transform: translateY(-2px); }
 
 /* Estados de stock */
 .section-cards-body section .stock {
@@ -144,97 +132,32 @@
     text-transform: uppercase;
 }
 
-.section-cards-body section .stock.disponible {
-    background: var(--success-color);
-    color: white;
-}
-
-.section-cards-body section .stock.agotado {
-    background: var(--error-color);
-    color: white;
-}
-
-.section-cards-body section .stock.limitado {
-    background: var(--warning-color);
-    color: white;
-}
+.section-cards-body section .stock.disponible { background: var(--success-color); color: white; }
+.section-cards-body section .stock.agotado { background: var(--error-color); color: white; }
+.section-cards-body section .stock.limitado { background: var(--warning-color); color: white; }
 
 /* Categorías */
-.section-cards-body section .categoria {
-    display: inline-block;
-    background: var(--neutral-100);
-    color: var(--neutral-600);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-}
+.section-cards-body section .categoria { display: inline-block; background: var(--neutral-100); color: var(--neutral-600); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; margin-bottom: 1rem; }
 
 /* Marca */
-.section-cards-body section .marca {
-    color: var(--primary-color);
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-align: center;
-    margin-bottom: 0.5rem;
-}
+.section-cards-body section .marca { color: var(--primary-color); font-weight: 600; font-size: 0.9rem; text-align: center; margin-bottom: 0.5rem; }
 
 /* Detalles */
-.section-cards-body section .detalles {
-    color: var(--neutral-500);
-    font-size: 0.9rem;
-    font-style: italic;
-    text-align: center;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-}
+.section-cards-body section .detalles { color: var(--neutral-500); font-size: 0.9rem; font-style: italic; text-align: center; margin-bottom: 1rem; line-height: 1.4; }
 
 /* Envío gratuito */
-.section-cards-body section .envio-gratis {
-    background: linear-gradient(135deg, var(--success-color), var(--success-color));
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-align: center;
-    margin: 1rem 0;
-    box-shadow: var(--shadow-sm);
-}
+.section-cards-body section .envio-gratis { background: var(--success-color); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-align: center; margin: 1rem 0; box-shadow: var(--shadow-sm); }
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .section-cards-header h1 {
-        font-size: 2rem;
-    }
-    
-    .section-cards-body {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 0.5rem;
-    }
-    
-    .section-cards-body section {
-        padding: 1.5rem;
-    }
-    
-    .section-cards-body section img {
-        width: 100px;
-        height: 100px;
-    }
+    .section-cards-header h1 { font-size: 2rem; }
+    .section-cards-body { grid-template-columns: 1fr; gap: 1.5rem; padding: 0.5rem; }
+    .section-cards-body section { padding: 1.5rem; }
+    .section-cards-body section img { width: 100px; height: 100px; }
 }
 
 @media (max-width: 480px) {
-    .section-cards-header {
-        padding: 1.5rem 1rem;
-    }
-    
-    .section-cards-header h1 {
-        font-size: 1.75rem;
-    }
-    
-    .section-cards-body section {
-        padding: 1rem;
-    }
+    .section-cards-header { padding: 1.5rem 1rem; }
+    .section-cards-header h1 { font-size: 1.75rem; }
+    .section-cards-body section { padding: 1rem; }
 }

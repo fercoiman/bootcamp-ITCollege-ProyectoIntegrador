@@ -1,36 +1,42 @@
 /* Importar fuentes modernas de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Variables CSS para la paleta de colores moderna */
+/* Variables CSS para la paleta de colores (sin degradados) */
 :root {
-    /* Colores principales */
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --primary-light: #a5b4fc;
-    
-    /* Colores secundarios */
-    --secondary-color: #10b981;
-    --secondary-dark: #059669;
-    --secondary-light: #6ee7b7;
-    
-    /* Colores neutros */
-    --neutral-50: #fafafa;
-    --neutral-100: #f5f5f5;
-    --neutral-200: #e5e5e5;
-    --neutral-300: #d4d4d4;
-    --neutral-400: #a3a3a3;
-    --neutral-500: #737373;
-    --neutral-600: #525252;
-    --neutral-700: #404040;
-    --neutral-800: #262626;
-    --neutral-900: #171717;
-    
-    /* Colores de estado */
+    /* Paleta solicitada */
+    --brand-dark: #27374D;
+    /* oscuro */
+    --brand-main: #526D82;
+    /* medio principal */
+    --brand-soft: #9DB2BF;
+    /* claro medio */
+    --brand-light: #DDE6ED;
+    /* más claro */
+
+    /* Asignaciones utilizadas en el sitio */
+    --primary-color: var(--brand-main);
+    --primary-dark: var(--brand-dark);
+    --primary-light: var(--brand-soft);
+    --secondary-color: var(--brand-soft);
+
+    /* Neutros derivados de la paleta */
+    --neutral-50: var(--brand-light);
+    --neutral-100: var(--brand-light);
+    --neutral-200: var(--brand-soft);
+    --neutral-300: var(--brand-soft);
+    --neutral-400: var(--brand-main);
+    --neutral-500: var(--brand-main);
+    --neutral-600: var(--brand-dark);
+    --neutral-700: var(--brand-dark);
+    --neutral-800: var(--brand-dark);
+    --neutral-900: var(--brand-dark);
+
+    /* Colores de estado (se mantienen, pero sin degradados) */
     --success-color: #10b981;
     --warning-color: #f59e0b;
     --error-color: #ef4444;
     --info-color: #3b82f6;
-    
+
     /* Sombras */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -54,16 +60,35 @@ body {
 }
 
 /* Tipografía */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 1rem;
+    color: var(--brand-soft);
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
+h1 {
+    font-size: 2.5rem;
+    background: var(--brand-soft);
+    color: #FFFFFF;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
 
 p {
     margin-bottom: 1rem;
@@ -72,7 +97,7 @@ p {
 
 /* Header y navegación */
 header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    background: var(--primary-dark);
     box-shadow: var(--shadow-lg);
     position: sticky;
     top: 0;
@@ -118,13 +143,13 @@ header nav ul li a:hover {
 }
 
 /* Header principal */
-header > div {
+header>div {
     background: white;
     padding: 1.5rem 0;
     box-shadow: var(--shadow-sm);
 }
 
-header > div {
+header>div {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -178,17 +203,17 @@ header > div {
 
 #barra-busqueda form input[type="text"]:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    border-color: var(--brand-soft);
+    box-shadow: 0 0 0 3px rgb(157 178 191 / 0.35);
 }
 
 #barra-busqueda form input[type="submit"] {
     padding: 0.75rem 1.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    color: white;
+    background: var(--brand-soft);
+    color: var(--primary-dark);
     border: none;
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -199,8 +224,8 @@ header > div {
 }
 
 #boton-carrito {
-    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
-    color: white;
+    background: var(--brand-soft);
+    color: var(--primary-dark);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -208,7 +233,7 @@ header > div {
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: var(--shadow-md);
@@ -229,7 +254,7 @@ main {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, var(--neutral-800), var(--neutral-900));
+    background: var(--primary-dark);
     color: white;
     padding: 3rem 2rem 1rem;
     margin-top: 3rem;
@@ -297,14 +322,14 @@ footer {
     margin: 0;
 }
 
-/* Botones generales */
+/* Botones generales (aplica a todo el sitio) */
 button {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    color: white;
+    background: var(--brand-soft);
+    color: var(--primary-dark);
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1rem;
@@ -336,31 +361,36 @@ a:hover {
         flex-direction: column;
         align-items: center;
     }
-    
-    header > div {
+
+    header>div {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
     }
-    
+
     #barra-busqueda {
         margin: 1rem 0;
         max-width: 100%;
     }
-    
+
     main {
         padding: 2rem 1rem;
     }
-    
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.5rem; }
-    
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         text-align: center;
     }
-    
+
     footer {
         padding: 2rem 1rem 1rem;
     }

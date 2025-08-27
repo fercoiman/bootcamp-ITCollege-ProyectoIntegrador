@@ -1,4 +1,4 @@
-/* Estilos específicos para la página de nosotros */
+/* Estilos específicos para la página de nosotros (sin degradados) */
 
 /* Contenedor principal */
 main {
@@ -9,19 +9,15 @@ main {
 
 main h1 {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--primary-dark);
     margin-bottom: 2rem;
     font-size: 2.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 /* Hero section */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
+    background: var(--brand-soft);
+    color: #FFFFFF;
     padding: 4rem 2rem;
     border-radius: 16px;
     text-align: center;
@@ -31,19 +27,8 @@ main h1 {
     overflow: hidden;
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
-}
-
 .hero-section h2 {
-    color: white;
+    color: #FFFFFF;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     position: relative;
@@ -53,7 +38,7 @@ main h1 {
 .hero-section p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.95;
     position: relative;
     z-index: 1;
     max-width: 600px;
@@ -72,10 +57,13 @@ main h1 {
 }
 
 .valores-section h2 {
-    color: var(--primary-color);
+    background: var(--brand-soft);
+    color: #FFFFFF;
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
 }
 
 .valores-grid {
@@ -87,7 +75,7 @@ main h1 {
 .valor-item {
     text-align: center;
     padding: 2rem 1rem;
-    background: linear-gradient(135deg, var(--neutral-50), var(--neutral-100));
+    background: var(--neutral-50);
     border-radius: 12px;
     border: 1px solid var(--neutral-200);
     transition: all 0.3s ease;
@@ -128,10 +116,13 @@ main h1 {
 }
 
 .equipo-section h2 {
-    color: var(--primary-color);
+    background: var(--brand-soft);
+    color: #FFFFFF;
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
 }
 
 .equipo-grid {
@@ -143,7 +134,7 @@ main h1 {
 .miembro-equipo {
     text-align: center;
     padding: 2rem;
-    background: linear-gradient(135deg, var(--neutral-50), var(--neutral-100));
+    background: var(--neutral-50);
     border-radius: 12px;
     border: 1px solid var(--neutral-200);
     transition: all 0.3s ease;
@@ -152,7 +143,7 @@ main h1 {
 .miembro-equipo:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--secondary-light);
+    border-color: var(--secondary-color);
 }
 
 .miembro-equipo img {
@@ -195,10 +186,13 @@ main h1 {
 }
 
 .historia-section h2 {
-    color: var(--primary-color);
+    background: var(--brand-soft);
+    color: #FFFFFF;
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
 }
 
 .timeline {
@@ -214,7 +208,7 @@ main h1 {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     transform: translateX(-50%);
 }
 
@@ -255,7 +249,7 @@ main h1 {
 }
 
 .timeline-content {
-    background: linear-gradient(135deg, var(--neutral-50), var(--neutral-100));
+    background: var(--neutral-50);
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid var(--neutral-200);
@@ -282,7 +276,7 @@ main h1 {
 
 /* Sección de contacto */
 .contacto-section {
-    background: linear-gradient(135deg, var(--neutral-50), var(--neutral-100));
+    background: var(--neutral-50);
     padding: 3rem 2rem;
     border-radius: 16px;
     border: 1px solid var(--neutral-200);
@@ -290,9 +284,12 @@ main h1 {
 }
 
 .contacto-section h2 {
-    color: var(--primary-color);
+    background: var(--brand-soft);
+    color: #FFFFFF;
     margin-bottom: 1.5rem;
     font-size: 2rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
 }
 
 .contacto-section p {
@@ -305,8 +302,8 @@ main h1 {
 }
 
 .btn-contacto {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    color: white;
+    background: var(--brand-soft);
+    color: var(--primary-dark);
     padding: 1rem 2rem;
     border-radius: 8px;
     font-size: 1.1rem;
@@ -324,7 +321,7 @@ main h1 {
     main {
         padding: 1rem;
     }
-    
+
     .hero-section,
     .valores-section,
     .equipo-section,
@@ -332,30 +329,30 @@ main h1 {
     .contacto-section {
         padding: 2rem 1rem;
     }
-    
+
     main h1,
     .hero-section h2 {
         font-size: 2rem;
     }
-    
+
     .valores-section h2,
     .equipo-section h2,
     .historia-section h2,
     .contacto-section h2 {
         font-size: 1.5rem;
     }
-    
+
     .timeline::before {
         left: 20px;
     }
-    
+
     .timeline-item {
         width: 100%;
         left: 0 !important;
         text-align: left;
         padding-left: 50px;
     }
-    
+
     .timeline-item::before {
         left: 12px !important;
     }
@@ -365,17 +362,17 @@ main h1 {
     .hero-section {
         padding: 2rem 1rem;
     }
-    
+
     .hero-section h2 {
         font-size: 1.75rem;
     }
-    
+
     .valores-grid,
     .equipo-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    
+
     .valor-item,
     .miembro-equipo {
         padding: 1.5rem 1rem;
@@ -388,6 +385,7 @@ main h1 {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -414,7 +412,7 @@ main h1 {
     animation: fadeInUp 0.8s ease-out 0.8s both;
 }
 
-/* Hover effects mejorados */
+/* Hover */
 .valor-item:hover i,
 .miembro-equipo:hover img {
     transform: scale(1.1);
