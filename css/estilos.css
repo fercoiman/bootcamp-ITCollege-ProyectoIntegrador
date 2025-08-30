@@ -1,49 +1,6 @@
 /* Importar fuentes modernas de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Variables CSS para la paleta de colores (sin degradados) */
-:root {
-    /* Paleta solicitada */
-    --brand-dark: #27374D;
-    /* oscuro */
-    --brand-main: #526D82;
-    /* medio principal */
-    --brand-soft: #9DB2BF;
-    /* claro medio */
-    --brand-light: #DDE6ED;
-    /* más claro */
-
-    /* Asignaciones utilizadas en el sitio */
-    --primary-color: var(--brand-main);
-    --primary-dark: var(--brand-dark);
-    --primary-light: var(--brand-soft);
-    --secondary-color: var(--brand-soft);
-
-    /* Neutros derivados de la paleta */
-    --neutral-50: var(--brand-light);
-    --neutral-100: var(--brand-light);
-    --neutral-200: var(--brand-soft);
-    --neutral-300: var(--brand-soft);
-    --neutral-400: var(--brand-main);
-    --neutral-500: var(--brand-main);
-    --neutral-600: var(--brand-dark);
-    --neutral-700: var(--brand-dark);
-    --neutral-800: var(--brand-dark);
-    --neutral-900: var(--brand-dark);
-
-    /* Colores de estado (se mantienen, pero sin degradados) */
-    --success-color: #10b981;
-    --warning-color: #f59e0b;
-    --error-color: #ef4444;
-    --info-color: #3b82f6;
-
-    /* Sombras */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-}
-
 /* Reset y estilos base */
 * {
     margin: 0;
@@ -54,8 +11,8 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-    color: var(--neutral-800);
-    background-color: var(--neutral-50);
+    color: #27374D;
+    background-color: #DDE6ED;
     font-size: 16px;
 }
 
@@ -70,12 +27,12 @@ h6 {
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 1rem;
-    color: var(--brand-soft);
+    color: #9DB2BF;
 }
 
 h1 {
     font-size: 2.5rem;
-    background: var(--brand-soft);
+    background: #172737;
     color: #FFFFFF;
     padding: 1rem 1.5rem;
     border-radius: 12px;
@@ -92,13 +49,13 @@ h3 {
 
 p {
     margin-bottom: 1rem;
-    color: var(--neutral-600);
+    color: #27374D;
 }
 
 /* Header y navegación */
 header {
-    background: var(--primary-dark);
-    box-shadow: var(--shadow-lg);
+    background: #172737;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -139,14 +96,14 @@ header nav ul li a {
 header nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 /* Header principal */
 header>div {
-    background: white;
+    background: #172737;
     padding: 1.5rem 0;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
 header>div {
@@ -155,7 +112,7 @@ header>div {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.5rem 2rem;
+    padding: 2rem 2rem;
 }
 
 #logo {
@@ -165,20 +122,22 @@ header>div {
 }
 
 #logo img {
-    max-width: 100px;
+    max-width: 180px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px;
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px -2px rgb(0 0 0 / 0.15);
 }
 
 #logo img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
+    box-shadow: 0 8px 16px -4px rgb(0 0 0 / 0.2);
 }
 
 #barra-busqueda {
     flex: 1;
     max-width: 500px;
-    margin: 0 2rem;
+    margin: 0 3rem;
 }
 
 #barra-busqueda form {
@@ -194,7 +153,7 @@ header>div {
 #barra-busqueda form input[type="text"] {
     flex: 1;
     padding: 0.75rem 1rem;
-    border: 2px solid var(--neutral-200);
+    border: 2px solid #9DB2BF;
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -203,14 +162,14 @@ header>div {
 
 #barra-busqueda form input[type="text"]:focus {
     outline: none;
-    border-color: var(--brand-soft);
+    border-color: #9DB2BF;
     box-shadow: 0 0 0 3px rgb(157 178 191 / 0.35);
 }
 
 #barra-busqueda form input[type="submit"] {
     padding: 0.75rem 1.5rem;
-    background: var(--brand-soft);
-    color: var(--primary-dark);
+    background: #172737;
+    color: #FFFFFF;
     border: none;
     border-radius: 8px;
     font-weight: 700;
@@ -220,12 +179,12 @@ header>div {
 
 #barra-busqueda form input[type="submit"]:hover {
     transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 #boton-carrito {
-    background: var(--brand-soft);
-    color: var(--primary-dark);
+    background: #172737;
+    color: #FFFFFF;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -236,12 +195,12 @@ header>div {
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 #boton-carrito:hover {
     transform: scale(1.1);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 /* Main content */
@@ -254,7 +213,7 @@ main {
 
 /* Footer */
 footer {
-    background: var(--primary-dark);
+    background: #172737;
     color: white;
     padding: 3rem 2rem 1rem;
     margin-top: 3rem;
@@ -271,7 +230,7 @@ footer {
 
 .footer-section h3,
 .footer-section h4 {
-    color: var(--neutral-100);
+    color: #DDE6ED;
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -282,11 +241,11 @@ footer {
 
 .footer-section h4 {
     font-size: 1.1rem;
-    color: var(--primary-light);
+    color: #9DB2BF;
 }
 
 .footer-section p {
-    color: var(--neutral-300);
+    color: #9DB2BF;
     margin-bottom: 0.5rem;
     line-height: 1.6;
 }
@@ -301,31 +260,31 @@ footer {
 }
 
 .footer-section ul li a {
-    color: var(--neutral-300);
+    color: #9DB2BF;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: var(--primary-light);
+    color: #9DB2BF;
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid var(--neutral-700);
+    border-top: 1px solid #27374D;
 }
 
 .footer-bottom p {
-    color: var(--neutral-400);
+    color: #526D82;
     font-size: 0.9rem;
     margin: 0;
 }
 
 /* Botones generales (aplica a todo el sitio) */
 button {
-    background: var(--brand-soft);
-    color: var(--primary-dark);
+    background: #172737;
+    color: #FFFFFF;
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
@@ -337,7 +296,7 @@ button {
 
 button:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 button:active {
@@ -346,13 +305,13 @@ button:active {
 
 /* Enlaces */
 a {
-    color: var(--primary-color);
+    color: #526D82;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--primary-dark);
+    color: #27374D;
 }
 
 /* Responsive design */

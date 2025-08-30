@@ -22,7 +22,7 @@
         </nav>
         <div>
             <div id="logo">
-                <img src="./img/ecommerceStoreLogo.png" width="100px" alt="logo">
+                <img src="./img/BootCampStore-fondoInvertido.png" alt="logo">
             </div>
             <div id="barra-busqueda">
                 <form action="">
@@ -39,99 +39,106 @@
         <h1>Alta de Productos</h1>
 
         <form action="#" class="alta-form" method="POST">
-            <!-- campo nombre -->
-            <div class="input-group">
-                <label for="nombre">Nombre del producto *</label>
-                <input id="nombre" type="text" name="nombre" required minlength="3" maxlength="100" placeholder="Ingresa el nombre del producto">
-                <div class="error-detail"></div>
+            <!-- Encabezado del formulario -->
+            <div class="form-header">
+                <h2>Información del Producto</h2>
+                <p>Completa todos los campos obligatorios para registrar tu producto</p>
             </div>
 
-            <!-- campo precio -->
-            <div class="input-group">
-                <label for="precio">Precio *</label>
-                <input id="precio" type="number" name="precio" required min="0" step="0.01" placeholder="0.00">
-                <div class="error-detail"></div>
+            <!-- Primera fila: Nombre y Precio -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">Nombre del producto</label>
+                    <input id="nombre" type="text" name="nombre" required minlength="3" maxlength="100" placeholder="Ingresa el nombre del producto">
+                </div>
+
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input id="precio" type="number" name="precio" required min="0" step="0.01" placeholder="0.00">
+                </div>
             </div>
 
-            <!-- campo stock -->
-            <div class="input-group">
-                <label for="stock">Stock disponible *</label>
-                <input id="stock" type="number" name="stock" required min="0" placeholder="0">
-                <div class="error-detail"></div>
+            <!-- Segunda fila: Stock y Marca -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="stock">Stock disponible</label>
+                    <input id="stock" type="number" name="stock" required min="0" placeholder="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="marca">Marca</label>
+                    <input id="marca" type="text" name="marca" required minlength="2" maxlength="50" placeholder="Ingresa la marca">
+                </div>
             </div>
 
-            <!-- campo marca -->
-            <div class="input-group">
-                <label for="marca">Marca *</label>
-                <input id="marca" type="text" name="marca" required minlength="2" maxlength="50" placeholder="Ingresa la marca">
-                <div class="error-detail"></div>
+            <!-- Tercera fila: Categoría y URL de imagen -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Selecciona una categoría</option>
+                        <option value="electronica">Electrónica</option>
+                        <option value="ropa">Ropa</option>
+                        <option value="hogar">Hogar</option>
+                        <option value="deportes">Deportes</option>
+                        <option value="libros">Libros</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="foto" class="optional">URL de la imagen</label>
+                    <input id="foto" type="url" name="foto" placeholder="https://ejemplo.com/imagen.jpg">
+                </div>
             </div>
 
-            <!-- campo categoria -->
-            <div class="input-group">
-                <label for="categoria">Categoría *</label>
-                <select id="categoria" name="categoria" required>
-                    <option value="">Selecciona una categoría</option>
-                    <option value="electronica">Electrónica</option>
-                    <option value="ropa">Ropa</option>
-                    <option value="hogar">Hogar</option>
-                    <option value="deportes">Deportes</option>
-                    <option value="libros">Libros</option>
-                    <option value="otros">Otros</option>
-                </select>
-                <div class="error-detail"></div>
-            </div>
-
-            <!-- campo detalles -->
-            <div class="input-group">
-                <label for="detalles">Descripción del producto</label>
+            <!-- Campo de descripción (ancho completo) -->
+            <div class="form-group full-width">
+                <label for="detalles" class="optional">Descripción del producto</label>
                 <textarea id="detalles" name="detalles" rows="4" maxlength="500" placeholder="Describe las características del producto..."></textarea>
-                <div class="error-detail"></div>
             </div>
 
-            <!-- campo foto -->
-            <div class="input-group">
-                <label for="foto">URL de la imagen</label>
-                <input id="foto" type="url" name="foto" placeholder="https://ejemplo.com/imagen.jpg">
-                <div class="error-detail"></div>
+            <!-- Campo de envío (ancho completo) -->
+            <div class="form-group full-width">
+                <div class="checkbox-group">
+                    <input id="envio" type="checkbox" name="envio">
+                    <label for="envio">Envío gratuito disponible</label>
+                </div>
             </div>
 
-            <!-- campo envío -->
-            <div class="input-group">
-                <input id="envio" type="checkbox" name="envio">
-                <label for="envio">Envío gratuito disponible</label>
+            <!-- Botón de envío -->
+            <div class="form-submit">
+                <button type="submit">Agregar Producto</button>
             </div>
-
-            <button type="submit">Agregar Producto</button>
         </form>
 
-        <hr>
-
-        <h2>Lista de productos disponibles</h2>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Precio</th>
-                    <th>Stock</th>
-                    <th>Marca</th>
-                    <th>Categoría</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Los productos se cargarán dinámicamente aquí -->
-            </tbody>
-        </table>
+        <!-- Tabla de productos -->
+        <div class="productos-tabla">
+            <h2>Lista de Productos Disponibles</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Marca</th>
+                        <th>Categoría</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los productos se cargarán dinámicamente aquí -->
+                </tbody>
+            </table>
+        </div>
         
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>ECommerce Store</h3>
-                <p>Tu tienda de confianza online con los mejores productos y precios.</p>
+                <h3>BootCamp Store</h3>
+                <p>Tu tienda de confianza con los mejores productos y precios.</p>
             </div>
             <div class="footer-section">
                 <h4>Enlaces rápidos</h4>
@@ -143,13 +150,13 @@
             </div>
             <div class="footer-section">
                 <h4>Contacto</h4>
-                <p>📧 info@ecommerce.com</p>
-                <p>📞 +34 123 456 789</p>
-                <p>📍 Calle Principal 123, Ciudad</p>
+                <p>📧 info@bootcampstore.com</p>
+                <p>📞 +54 11 4561 7894</p>
+                <p>📍 Los Tilos 724, La Lucila, Buenos Aires</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; Copyright 2025 ECommerce Store. Todos los derechos reservados.</p>
+            <p>&copy; Copyright 2025 BootCamp Store. Todos los derechos reservados.</p>
         </div>
     </footer>
     

@@ -22,7 +22,7 @@
         </nav>
         <div>
             <div id="logo">
-                <img src="./img/ecommerceStoreLogo.png" width="100px" alt="logo">
+                <img src="./img/BootCampStore-fondoInvertido.png" alt="logo">
             </div>
             <div id="barra-busqueda">
                 <form action="">
@@ -42,88 +42,115 @@
         <div class="carrito-container">
             <!-- Lista de productos del carrito -->
             <div class="carrito-productos">
-                <h2>Productos en el carrito</h2>
+                <h2>Productos en el Carrito</h2>
                 
                 <!-- Producto 1 -->
-                <div class="producto-carrito">
-                    <img src="https://via.placeholder.com/80x80/6366f1/ffffff?text=P" alt="Producto 1">
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="https://via.placeholder.com/100x100/6366f1/ffffff?text=📱" alt="Smartphone XYZ">
+                    </div>
                     <div class="producto-info">
                         <h3>Smartphone XYZ</h3>
-                        <div class="marca">Marca: TechCorp</div>
-                        <div class="categoria">Electrónica</div>
+                        <div class="producto-detalles">
+                            <span class="marca">TechCorp</span>
+                            <span class="categoria">Electrónica</span>
+                        </div>
                     </div>
                     <div class="cantidad-controls">
-                        <button type="button">-</button>
-                        <input type="number" value="1" min="1" max="10">
-                        <button type="button">+</button>
+                        <button type="button" class="btn-cantidad">−</button>
+                        <input type="number" value="1" min="1" max="10" class="cantidad-input">
+                        <button type="button" class="btn-cantidad">+</button>
                     </div>
-                    <div class="precio-producto">€299.99</div>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <div class="precio-producto">
+                        <span class="precio">€299.99</span>
+                        <span class="precio-total">€299.99</span>
+                    </div>
+                    <button class="btn-eliminar" title="Eliminar producto">
+                        <span>🗑️</span>
+                    </button>
                 </div>
                 
                 <!-- Producto 2 -->
-                <div class="producto-carrito">
-                    <img src="https://via.placeholder.com/80x80/10b981/ffffff?text=P" alt="Producto 2">
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="https://via.placeholder.com/100x100/10b981/ffffff?text=🎧" alt="Auriculares Pro">
+                    </div>
                     <div class="producto-info">
                         <h3>Auriculares Pro</h3>
-                        <div class="marca">Marca: AudioTech</div>
-                        <div class="categoria">Electrónica</div>
+                        <div class="producto-detalles">
+                            <span class="marca">AudioTech</span>
+                            <span class="categoria">Electrónica</span>
+                        </div>
                     </div>
                     <div class="cantidad-controls">
-                        <button type="button">-</button>
-                        <input type="number" value="2" min="1" max="10">
-                        <button type="button">+</button>
+                        <button type="button" class="btn-cantidad">−</button>
+                        <input type="number" value="2" min="1" max="10" class="cantidad-input">
+                        <button type="button" class="btn-cantidad">+</button>
                     </div>
-                    <div class="precio-producto">€89.99</div>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <div class="precio-producto">
+                        <span class="precio">€89.99</span>
+                        <span class="precio-total">€179.98</span>
+                    </div>
+                    <button class="btn-eliminar" title="Eliminar producto">
+                        <span>🗑️</span>
+                    </button>
                 </div>
                 
                 <!-- Producto 3 -->
-                <div class="producto-carrito">
-                    <img src="https://via.placeholder.com/80x80/f59e0b/ffffff?text=P" alt="Producto 3">
+                <div class="producto-item">
+                    <div class="producto-imagen">
+                        <img src="https://via.placeholder.com/100x100/f59e0b/ffffff?text=👕" alt="Camiseta Deportiva">
+                    </div>
                     <div class="producto-info">
                         <h3>Camiseta Deportiva</h3>
-                        <div class="marca">Marca: SportFit</div>
-                        <div class="categoria">Ropa</div>
+                        <div class="producto-detalles">
+                            <span class="marca">SportFit</span>
+                            <span class="categoria">Ropa</span>
+                        </div>
                     </div>
                     <div class="cantidad-controls">
-                        <button type="button">-</button>
-                        <input type="number" value="1" min="1" max="10">
-                        <button type="button">+</button>
+                        <button type="button" class="btn-cantidad">−</button>
+                        <input type="number" value="1" min="1" max="10" class="cantidad-input">
+                        <button type="button" class="btn-cantidad">+</button>
                     </div>
-                    <div class="precio-producto">€24.99</div>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <div class="precio-producto">
+                        <span class="precio">€24.99</span>
+                        <span class="precio-total">€24.99</span>
+                    </div>
+                    <button class="btn-eliminar" title="Eliminar producto">
+                        <span>🗑️</span>
+                    </button>
                 </div>
             </div>
             
             <!-- Resumen del carrito -->
             <div class="carrito-resumen">
-                <h2>Resumen del pedido</h2>
+                <h2>Resumen del Pedido</h2>
                 
-                <div class="resumen-detalle">
+                <div class="resumen-item">
                     <span class="label">Subtotal (4 items)</span>
                     <span class="valor">€504.96</span>
                 </div>
                 
-                <div class="resumen-detalle">
+                <div class="resumen-item">
                     <span class="label">Envío</span>
                     <span class="valor">€9.99</span>
                 </div>
                 
-                <div class="resumen-detalle">
+                <div class="resumen-item">
                     <span class="label">Impuestos</span>
                     <span class="valor">€25.25</span>
                 </div>
                 
-                <div class="resumen-detalle">
+                <div class="resumen-item total">
                     <span class="label">Total</span>
                     <span class="valor">€540.20</span>
                 </div>
                 
-                <button class="btn-checkout">Proceder al pago</button>
+                <button class="btn-checkout">Proceder al Pago</button>
                 
-                <div style="margin-top: 1rem; text-align: center;">
-                    <small style="color: var(--neutral-500);">
+                <div class="resumen-notas">
+                    <small>
                         * Los precios incluyen IVA<br>
                         * Envío gratuito en pedidos superiores a €50
                     </small>
@@ -133,18 +160,18 @@
         
         <!-- Carrito vacío (oculto por defecto) -->
         <div class="carrito-vacio" style="display: none;">
-            <i>🛒</i>
+            <div class="carrito-vacio-icono">🛒</div>
             <h2>Tu carrito está vacío</h2>
             <p>Parece que aún no has agregado productos a tu carrito de compras.</p>
-            <a href="./index.html" class="btn-continuar">Continuar comprando</a>
+            <a href="./index.html" class="btn-continuar">Continuar Comprando</a>
         </div>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>ECommerce Store</h3>
-                <p>Tu tienda de confianza online con los mejores productos y precios.</p>
+                <h3>BootCamp Store</h3>
+                <p>Tu tienda de confianza con los mejores productos y precios.</p>
             </div>
             <div class="footer-section">
                 <h4>Enlaces rápidos</h4>
@@ -156,13 +183,13 @@
             </div>
             <div class="footer-section">
                 <h4>Contacto</h4>
-                <p>📧 info@ecommerce.com</p>
-                <p>📞 +34 123 456 789</p>
-                <p>📍 Calle Principal 123, Ciudad</p>
+                <p>📧 info@bootcampstore.com</p>
+                <p>📞 +54 11 4561 7894</p>
+                <p>📍 Los Tilos 724, La Lucila, Buenos Aires</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; Copyright 2025 ECommerce Store. Todos los derechos reservados.</p>
+            <p>&copy; Copyright 2025 BootCamp Store. Todos los derechos reservados.</p>
         </div>
     </footer>
     

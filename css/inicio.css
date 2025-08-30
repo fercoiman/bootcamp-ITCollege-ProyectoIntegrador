@@ -1,163 +1,324 @@
-/* Estilos específicos para la página de inicio */
-
-/* Header de la sección de productos */
-.section-cards-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background: var(--brand-soft);
-    border-radius: 16px;
+.hero-section {
+    background: #9DB2BF;
     color: #FFFFFF;
-    box-shadow: var(--shadow-xl);
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: -3rem -2rem 3rem -2rem;
+    border-radius: 0 0 20px 20px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+    background: none;
+    padding: 0;
+    text-align: center;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-section .btn-primary {
+    background: #172737;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-section .btn-primary:hover {
+    background: #526D82;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Sección de tarjetas */
+.section-cards {
+    margin-bottom: 4rem;
+}
+
+.section-cards-header {
+    background: #172737;
+    color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .section-cards-header h1 {
+    background: none;
     color: #FFFFFF;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    padding: 0;
+    margin: 0;
+    font-size: 2.5rem;
 }
 
-/* Contenedor de las tarjetas de productos */
+.section-cards-header p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    opacity: 0.9;
+}
+
 .section-cards-body {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 1rem;
 }
 
-/* Estilos para las tarjetas de productos */
 .section-cards-body section {
     background: white;
-    border-radius: 16px;
-    padding: 2rem;
-    box-shadow: var(--shadow-lg);
-    transition: all 0.3s ease;
-    border: 1px solid var(--neutral-200);
-    position: relative;
+    border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .section-cards-body section:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
-    border-color: var(--primary-light);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
-.section-cards-body section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--primary-light);
-}
-
-/* Imágenes de productos */
 .section-cards-body section img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin: 0 auto 1.5rem;
-    display: block;
-    box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease;
-}
-
-.section-cards-body section:hover img {
-    transform: scale(1.05);
-}
-
-/* Títulos de productos */
-.section-cards-body section h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-dark);
-    margin-bottom: 1rem;
-    text-align: center;
-    background: var(--brand-soft);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-}
-
-/* Información de productos */
-.section-cards-body section p {
-    color: var(--neutral-600);
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-/* Precios */
-.section-cards-body section .precio {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--primary-dark);
-    text-align: center;
-    margin: 1rem 0;
-    padding: 0.5rem;
-    background: var(--brand-soft);
-    border-radius: 8px;
-}
-
-/* Botones de acción */
-.section-cards-body section button {
     width: 100%;
-    margin-top: 1rem;
-    padding: 0.875rem;
-    font-size: 1rem;
+    height: 180px;
+    object-fit: contain;
+    padding: 1rem;
+    background: #DDE6ED;
+}
+
+.section-cards-body section h3 {
+    background: #172737;
+    color: #FFFFFF;
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* Información del producto */
+.producto-info {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.producto-info p {
+    color: #526D82;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.producto-info p:last-child {
+    margin-bottom: 0;
+}
+
+.producto-info .precio {
+    font-size: 1.3rem;
     font-weight: 700;
+    color: #27374D;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: #F8FAFC;
     border-radius: 8px;
-    transition: all 0.3s ease;
-    background: var(--brand-soft);
-    color: var(--primary-dark);
+    border: 1px solid #DDE6ED;
 }
 
-.section-cards-body section button.agregar-carrito { background: var(--brand-soft); color: var(--primary-dark); }
-.section-cards-body section button.agregar-carrito:hover { transform: translateY(-2px); }
-.section-cards-body section button.ver-detalle { background: var(--brand-soft); color: var(--primary-dark); }
-.section-cards-body section button.ver-detalle:hover { transform: translateY(-2px); }
-
-/* Estados de stock */
-.section-cards-body section .stock {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
+.producto-info .stock {
+    color: #27374D;
     font-weight: 600;
+}
+
+.producto-info .marca,
+.producto-info .categoria {
+    color: #526D82;
+}
+
+.producto-info .detalles {
+    color: #526D82;
+    font-style: italic;
+}
+
+.producto-info .envio {
+    color: #526D82;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #DDE6ED;
+}
+
+/* Acciones del producto */
+.producto-acciones {
+    padding: 1rem;
+    border-top: 1px solid #DDE6ED;
+    background: #F8FAFC;
+}
+
+.btn-comprar {
+    background: #172737;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.section-cards-body section .stock.disponible { background: var(--success-color); color: white; }
-.section-cards-body section .stock.agotado { background: var(--error-color); color: white; }
-.section-cards-body section .stock.limitado { background: var(--warning-color); color: white; }
+.btn-comprar:hover {
+    background: #27374D;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+}
 
-/* Categorías */
-.section-cards-body section .categoria { display: inline-block; background: var(--neutral-100); color: var(--neutral-600); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; margin-bottom: 1rem; }
+.btn-comprar:active {
+    transform: translateY(0);
+}
 
-/* Marca */
-.section-cards-body section .marca { color: var(--primary-color); font-weight: 600; font-size: 0.9rem; text-align: center; margin-bottom: 0.5rem; }
+/* Estilos legacy para compatibilidad */
+.section-cards-body section p {
+    padding: 0;
+    color: #526D82;
+    margin: 0;
+    line-height: 1.4;
+}
 
-/* Detalles */
-.section-cards-body section .detalles { color: var(--neutral-500); font-size: 0.9rem; font-style: italic; text-align: center; margin-bottom: 1rem; line-height: 1.4; }
+.section-cards-body section .precio {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #27374D;
+    text-align: center;
+    padding: 0.5rem;
+    background: #F8FAFC;
+    border-radius: 8px;
+    border: 1px solid #DDE6ED;
+    margin-bottom: 1rem;
+}
 
-/* Envío gratuito */
-.section-cards-body section .envio-gratis { background: var(--success-color); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-align: center; margin: 1rem 0; box-shadow: var(--shadow-sm); }
+.section-cards-body section button.agregar-carrito {
+    background: #172737;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0 0 12px 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-/* Responsive design */
+.section-cards-body section button.agregar-carrito:hover {
+    background: #27374D;
+    color: white;
+}
+
+.section-cards-body section button.ver-detalle {
+    background: #172737;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-top: 1px solid #DDE6ED;
+}
+
+.section-cards-body section button.ver-detalle:hover {
+    background: #27374D;
+    color: white;
+}
+
+
+.features-section {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 4rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.features-section h2 {
+    text-align: center;
+    color: #27374D;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: #9DB2BF;
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    color: #27374D;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.feature-item p {
+    color: #526D82;
+    line-height: 1.6;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .section-cards-header h1 { font-size: 2rem; }
-    .section-cards-body { grid-template-columns: 1fr; gap: 1.5rem; padding: 0.5rem; }
-    .section-cards-body section { padding: 1.5rem; }
-    .section-cards-body section img { width: 100px; height: 100px; }
-}
-
-@media (max-width: 480px) {
-    .section-cards-header { padding: 1.5rem 1rem; }
-    .section-cards-header h1 { font-size: 1.75rem; }
-    .section-cards-body section { padding: 1rem; }
+    .hero-section {
+        padding: 3rem 1rem;
+        margin: -2rem -1rem 2rem -1rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .section-cards-header {
+        padding: 1.5rem;
+    }
+    
+    .section-cards-header h1 {
+        font-size: 2rem;
+    }
+    
+    .section-cards-body {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
