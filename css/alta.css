@@ -1,365 +1,142 @@
-/* Estilos específicos para la página "otra" (sin degradados) */
-
 main {
-    padding: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 main h1 {
-    color: #27374D;
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
-    background: #172737;
-    color: #FFFFFF;
-    padding: 1.5rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
 }
 
-/* Formulario mejorado */
 .alta-form {
-    background: white;
-    padding: 3rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    border: 1px solid #DDE6ED;
-    position: relative;
-    overflow: hidden;
-}
-
-.alta-form::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, #9DB2BF, #526D82, #9DB2BF);
-    border-radius: 16px 16px 0 0;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .form-header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-    padding-bottom: 2rem;
-    border-bottom: 2px solid #DDE6ED;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .form-header h2 {
-    color: #27374D;
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+  color: #111827;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .form-header p {
-    color: #526D82;
-    font-size: 1.1rem;
-    margin: 0;
+  color: #4b5563;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.form-group {
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-.form-group.full-width {
-    grid-column: 1 / -1;
+.form-group.full-width { 
+  grid-column: 1 / -1; 
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 0.75rem;
-    font-weight: 600;
-    color: #27374D;
-    font-size: 1rem;
-    position: relative;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #111827;
+  font-size: 1rem;
 }
 
 .form-group label::after {
-    content: ' *';
-    color: #ef4444;
-    font-weight: 400;
-}
-
-.form-group label.optional::after {
-    content: ' (opcional)';
-    color: #526D82;
-    font-weight: 400;
-    font-size: 0.9rem;
+  content: " *";
+  color: #ef4444;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-    width: 100%;
-    padding: 1rem 1.25rem;
-    border: 2px solid #DDE6ED;
-    border-radius: 12px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    background: #FFFFFF;
-    color: #27374D;
-    font-family: inherit;
-}
-
-.form-group input:hover,
-.form-group select:hover,
-.form-group textarea:hover {
-    border-color: #9DB2BF;
-    background: #F8FAFC;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #ffffff;
+  color: #111827;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    outline: none;
-    border-color: #526D82;
-    box-shadow: 0 0 0 4px rgb(82 109 130 / 0.15);
-    background: #FFFFFF;
-    transform: translateY(-1px);
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+  border-color: #2563eb;
 }
 
-.form-group textarea {
-    min-height: 120px;
-    resize: vertical;
-    line-height: 1.6;
-}
-
-.form-group select {
-    cursor: pointer;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
-    background-position: right 0.75rem center;
-    background-repeat: no-repeat;
-    background-size: 1.5em 1.5em;
-    padding-right: 2.5rem;
-    appearance: none;
-}
-
-/* Checkbox personalizado */
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem;
-    background: #F8FAFC;
-    border: 2px solid #DDE6ED;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
-.checkbox-group:hover {
-    border-color: #9DB2BF;
-    background: #DDE6ED;
-}
-
-.checkbox-group input[type="checkbox"] {
-    width: auto;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: none;
-    transform: scale(1.5);
-    cursor: pointer;
-}
-
-.checkbox-group input[type="checkbox"]:focus {
-    outline: none;
-    box-shadow: none;
-    transform: scale(1.5);
-}
-
-.checkbox-group label {
-    margin: 0;
-    cursor: pointer;
-    font-weight: 500;
-    color: #27374D;
-}
-
-.checkbox-group label::after {
-    content: none;
-}
-
-/* Campos especiales */
-.form-group input[type="number"] {
-    padding-right: 1rem;
-}
-
-.form-group input[type="file"] {
-    padding: 0.75rem;
-    border: 2px dashed #9DB2BF;
-    background: #F8FAFC;
-    cursor: pointer;
-}
-
-.form-group input[type="file"]:hover {
-    border-color: #526D82;
-    background: #DDE6ED;
-}
-
-.form-group input[type="file"]:focus {
-    border-color: #526D82;
-    background: #FFFFFF;
-}
-
-/* Botón de envío mejorado */
 .form-submit {
-    text-align: center;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 2px solid #DDE6ED;
+  text-align: center;
+  margin-top: 2rem;
 }
 
+/* Botón: usa las clases globales .btn / .btn-primary */
 .alta-form button {
-    background: #172737;
-    color: #FFFFFF;
-    width: 100%;
-    padding: 1.25rem 3rem;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    min-width: 200px;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  min-width: 180px;
 }
 
-.alta-form button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s;
-}
-
-.alta-form button:hover {
-    background: #27374D;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-}
-
-.alta-form button:hover::before {
-    left: 100%;
-}
-
-.alta-form button:active {
-    transform: translateY(-1px);
-}
-
-/* Tabla de productos mejorada */
+/* Tabla de productos */
 .productos-tabla {
-    margin-top: 4rem;
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    border: 1px solid #DDE6ED;
+  margin-top: 3rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
 }
 
 .productos-tabla h2 {
-    background: #9DB2BF;
-    color: #FFFFFF;
-    padding: 1.5rem 2rem;
-    margin: 0;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .productos-tabla table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .productos-tabla th,
 .productos-tabla td {
-    padding: 1.25rem 1.5rem;
-    text-align: left;
-    border-bottom: 1px solid #DDE6ED;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
 }
 
 .productos-tabla th {
-    background: #526D82;
-    color: white;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.productos-tabla tr:hover {
-    background: #F8FAFC;
+  background: #f5f7fb;
+  color: #111827;
+  font-weight: 600;
 }
 
 .productos-tabla tr:last-child td {
-    border-bottom: none;
+  border-bottom: none;
 }
 
-/* Responsive mejorado */
+/* Responsive */
 @media (max-width: 768px) {
-    main {
-        padding: 1rem;
-    }
-    
-    .alta-form {
-        padding: 2rem 1.5rem;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-    
-    .alta-form button {
-        width: 100%;
-        min-width: auto;
-        padding: 1rem 2rem;
-    }
-    
-    .productos-tabla {
-        overflow-x: auto;
-    }
-    
-    .productos-tabla th,
-    .productos-tabla td {
-        padding: 1rem;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .alta-form {
-        padding: 1.5rem 1rem;
-    }
-    
-    main h1 {
-        font-size: 2rem;
-        padding: 1rem 1.5rem;
-    }
-    
-    .form-header h2 {
-        font-size: 1.5rem;
-    }
-    
-    .form-header p {
-        font-size: 1rem;
-    }
+  main { padding: 1rem; }
+  .alta-form { padding: 1.5rem; }
+  .form-row { grid-template-columns: 1fr; gap: 0.75rem; }
+  .form-group { margin-bottom: 0.75rem; }
 }
