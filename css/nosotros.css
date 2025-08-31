@@ -12,7 +12,6 @@ main h1 {
   color: #ffffff;
 }
 
-/* ---------- HERO ---------- */
 .hero-section {
   background: linear-gradient(180deg, #ffffff 0%, #f5f7fb 100%);
   color: #111827;
@@ -35,7 +34,6 @@ main h1 {
   color: #4b5563;
 }
 
-/* ---------- SECCIÓN: VALORES ---------- */
 .valores-section,
 .equipo-section,
 .historia-section,
@@ -52,10 +50,10 @@ main h1 {
 .equipo-section h2,
 .historia-section h2,
 .contacto-section h2 {
-  background: #f5f7fb;
-  color: #111827;
+  background: #172737;
+  color: #ffffff;
   padding: 0.875rem 1rem;
-  margin: -1.5rem -1.5rem 1rem -1.5rem;
+  margin: -2.0rem -1.5rem 1rem -1.5rem;
   text-align: center;
   border-radius: 14px 14px 0 0;
   font-size: 1.5rem;
@@ -63,7 +61,7 @@ main h1 {
   border-bottom: 1px solid #e5e7eb;
 }
 
-/* Valores */
+
 .valores-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -133,7 +131,7 @@ main h1 {
   font-size: 1rem;
 }
 
-/* Botón: preferir .btn .btn-primary del styles.css */
+
 .btn-contacto {
   background: #2563eb;
   color: #ffffff;
@@ -145,15 +143,16 @@ main h1 {
   cursor: pointer;
   transition: transform .05s ease, background .15s ease, border-color .15s ease;
   text-decoration: none;
-  display: inline-block;
-}
+  display: flex;
+  justify-content: center;
+ }
 .btn-contacto:hover {
   background: #1d4ed8;
   border-color: #1d4ed8;
   transform: translateY(-1px);
 }
 
-/* ---------- Animaciones sutiles ---------- */
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -164,7 +163,6 @@ main h1 {
 .historia-section  { animation: fadeInUp .65s ease-out; }
 .contacto-section  { animation: fadeInUp .75s ease-out; }
 
-/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   main { padding: 1rem; }
 

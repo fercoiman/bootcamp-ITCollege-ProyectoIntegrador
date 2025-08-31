@@ -17,14 +17,10 @@
   max-width: 60ch;
   color: #4b5563;
 }
-/* Botón: usar .btn .btn-primary ya definido globalmente */
-.hero-section .btn-primary {
-  /* No redefinimos colores, aprovechamos el global */
-}
 
-/* ---------- SECCIÓN DE TARJETAS / CATEGORÍAS / LISTADOS ---------- */
+
 .section-cards {
-  margin: 2.5rem 0 3rem 0;
+  margin: 0;
 }
 .section-cards-header {
   background: #f5f7fb;
@@ -52,7 +48,7 @@
   gap: 1.25rem;
 }
 
-/* Card base (usa look & feel global) */
+
 .section-cards-body section {
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -129,14 +125,13 @@
   border-top: 1px solid #e5e7eb;
 }
 
-/* ---------- ACCIONES EN LA CARD ---------- */
+
 .producto-acciones {
   padding: 1rem;
   border-top: 1px solid #e5e7eb;
   background: #ffffff;
 }
 
-/* Preferir el botón global .btn / .btn-primary */
 .btn-comprar,
 .section-cards-body section button.agregar-carrito,
 .section-cards-body section button.ver-detalle {
@@ -149,20 +144,19 @@
   transition: transform .05s ease, background .15s ease, border-color .15s ease;
 }
 
-/* Si no usás las clases globales, aplicamos fallback */
 .btn-comprar,
 .section-cards-body section button.agregar-carrito {
   color: #ffffff;
-  border-color: ;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 .btn-comprar:hover,
 .section-cards-body section button.agregar-carrito:hover {
-  background: #1d4ed8;
-  border-color: #1d4ed8;
+  background: rgba(255, 255, 255, 0.2);
+  border-color:rgba(255, 255, 255, 0.2);
   transform: translateY(-1px);
 }
 
-/* Botón secundario para "ver detalle" si se usa */
+
 .section-cards-body section button.ver-detalle {
   margin-top: 0.5rem;
   background: #ffffff;
@@ -173,7 +167,6 @@
   background: rgba(37,99,235,0.08);
 }
 
-/* ---------- FEATURES / VENTAJA COMPETITIVA ---------- */
 .features-section {
   background: #ffffff;
   padding: 2rem 1.5rem;
@@ -215,7 +208,6 @@
   margin: 0;
 }
 
-/* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
   .hero-section { padding: 2.5rem 1rem; }
   .hero-section h1 { font-size: 1.75rem; }
