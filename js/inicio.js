@@ -16,12 +16,12 @@ function representarCardsProductos() {
                     '<h3>' + producto.nombre + '</h3>' +
                     '<img src="' + producto.foto + '" alt="foto de ' + producto.nombre + ' ' + producto.marca + '">' +
                     '<div class="producto-info">' +
-                        '<p class="precio"><b>Precio: </b>$' + producto.precio + '</p>' +
+                        '<p class="precio"><b>Precio : </b>$'+' ' + producto.precio + '</p>' +
                         '<p class="stock"><b>Stock: </b>' + producto.stock + '</p>' +
                         '<p class="marca"><b>Marca: </b>' + producto.marca + '</p>' +
                         '<p class="categoria"><b>Categoría: </b>' + producto.categoria + '</p>' +
                         '<p class="detalles"><b>Detalles: </b>' + producto.detalles + '</p>' +
-                        '<p class="envio"><b style="color:gold;">Envío: </b>' + (producto.envio? 'Si' : 'No') + '</p>' +
+                        '<p class="envio"><b ">Envío: </b>' + (producto.envio? 'Si' : 'No') + '</p>' +
                     '</div>' +
                     '<div class="producto-acciones">' +
                         '<button class="btn-comprar">Comprar</button>' +

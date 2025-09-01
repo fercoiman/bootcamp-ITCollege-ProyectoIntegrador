@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECommerce (contacto)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/contacto.css">
 </head>
+
 <body>
 
     <header>
@@ -40,41 +44,42 @@
 
     <main>
         <h1>Contacto</h1>
-        
-        <!-- Formulario de contacto -->
+
         <form class="contacto-form" action="#" method="POST">
             <div class="form-group">
                 <label for="nombre">Nombre completo *</label>
-                <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="50" placeholder="Ingresa tu nombre completo">
+                <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="50"
+                    placeholder="Ingresa tu nombre completo">
             </div>
-            
+
             <div class="form-group">
                 <label for="email">Correo electrónico *</label>
                 <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
             </div>
-            
+
             <div class="form-group">
                 <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" pattern="[0-9+\-\s()]+" placeholder="+34 123 456 789">
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9+\-\s()]+" placeholder="+54 11 9456 789">
             </div>
-            
+
             <div class="form-group">
                 <label for="asunto">Asunto *</label>
-                <input type="text" id="asunto" name="asunto" required minlength="5" maxlength="100" placeholder="¿En qué podemos ayudarte?">
+                <input type="text" id="asunto" name="asunto" required minlength="5" maxlength="100"
+                    placeholder="¿En qué podemos ayudarte?">
             </div>
-            
+
             <div class="form-group">
                 <label for="mensaje">Mensaje *</label>
-                <textarea id="mensaje" name="mensaje" required minlength="10" maxlength="1000" placeholder="Describe tu consulta o mensaje aquí..."></textarea>
+                <textarea id="mensaje" name="mensaje" required minlength="10" maxlength="1000"
+                    placeholder="Describe tu consulta o mensaje aquí..."></textarea>
             </div>
-            
+
             <button type="submit">Enviar mensaje</button>
         </form>
 
         <!-- Información de contacto -->
         <div class="contacto-info">
             <h2>Información de contacto</h2>
-            
             <div class="info-item">
                 <i>📍</i>
                 <div class="info-content">
@@ -82,7 +87,7 @@
                     <p>Los Tilos 724, La Lucila, Buenos Aires</p>
                 </div>
             </div>
-            
+
             <div class="info-item">
                 <i>📞</i>
                 <div class="info-content">
@@ -90,7 +95,7 @@
                     <p>+54 11 4561 7894</p>
                 </div>
             </div>
-            
+
             <div class="info-item">
                 <i>✉️</i>
                 <div class="info-content">
@@ -98,7 +103,7 @@
                     <p>info@bootcampstore.com</p>
                 </div>
             </div>
-            
+
             <div class="info-item">
                 <i>🕒</i>
                 <div class="info-content">
@@ -108,12 +113,16 @@
             </div>
         </div>
 
-        <!-- Mapa o ubicación -->
+
         <div class="contacto-mapa">
             <h2>Nuestra ubicación</h2>
             <div class="mapa-placeholder">
-                <p>Mapa interactivo de ubicación</p>
-                <p>Aquí se mostraría un mapa de Google Maps o similar</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.8614580106373!2d-58.522602223413955!3d-34.53173785370183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0d1e28cdb6b%3A0xae7580bb6de7116a!2sCentro%20Universitario%20Vicente%20L%C3%B3pez!5e0!3m2!1ses!2sar!4v1756678369636!5m2!1ses!2sar"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+                    style="width:100%;height:100%;border:0;display:block;border-radius:10px">
+                </iframe>
+
             </div>
         </div>
     </main>
@@ -143,9 +152,10 @@
             <p>&copy; Copyright 2025 BootCamp Store. Todos los derechos reservados.</p>
         </div>
     </footer>
-    
+
     <script src="js/contacto.js"></script>
     <script src="js/main.js"></script>
 
 </body>
+
 </html>

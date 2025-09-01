@@ -135,12 +135,14 @@ header>div {
     flex: 1;
     max-width: 500px;
     margin: 0 3rem;
+
 }
 
 #barra-busqueda form {
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    
 }
 
 #barra-busqueda form label {

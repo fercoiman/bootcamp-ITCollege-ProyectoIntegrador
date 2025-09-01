@@ -5,12 +5,14 @@
   padding: 3rem 1.5rem;
   border-bottom: 1px solid #e5e7eb;
 }
+
 .hero-section h1 {
   font-size: 2.25rem;
   margin: 0 0 0.75rem 0;
   color: #111827;
   font-weight: 800;
 }
+
 .hero-section p {
   font-size: 1.1rem;
   margin: 0 auto 1.25rem auto;
@@ -22,8 +24,9 @@
 .section-cards {
   margin: 0;
 }
+
 .section-cards-header {
-  background: #f5f7fb;
+  background: #172737;
   color: #111827;
   padding: 1.25rem;
   border-radius: 14px;
@@ -31,11 +34,14 @@
   margin-bottom: 1.25rem;
   border: 1px solid #e5e7eb;
 }
+
 .section-cards-header h1 {
   margin: 0;
   font-size: 1.75rem;
   font-weight: 800;
+  
 }
+
 .section-cards-header p {
   font-size: 1rem;
   margin-top: 0.5rem;
@@ -46,37 +52,38 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.25rem;
-}
+  }
 
 
 .section-cards-body section {
-  background: #ffffff;
+  color: #ffffff;
+  background-color: white;
   border: 1px solid #e5e7eb;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
   transition: box-shadow .2s, transform .2s;
   display: flex;
   flex-direction: column;
 }
+
 .section-cards-body section:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
-/* Imagen */
+
 .section-cards-body section img {
   width: 100%;
   height: 180px;
   object-fit: contain;
   padding: 1rem;
-  background: #f5f7fb;
+  
   border-bottom: 1px solid #e5e7eb;
 }
 
-/* Título de la tarjeta */
+
 .section-cards-body section h3 {
-  color: #111827;
   padding: 0.875rem 1rem 0 1rem;
   margin: 0;
   font-size: 1.15rem;
@@ -84,24 +91,27 @@
   text-align: center;
 }
 
-/* ---------- INFO DE PRODUCTO EN LA CARD ---------- */
 .producto-info {
   padding: 0.75rem 1rem 1rem 1rem;
   flex-grow: 1;
+  
 }
+
 .producto-info p {
   color: #4b5563;
   margin: 0 0 0.5rem 0;
   line-height: 1.5;
   font-size: 0.95rem;
 }
-.producto-info p:last-child { margin-bottom: 0; }
+
+.producto-info p:last-child {
+  margin-bottom: 0;
+}
 
 .producto-info .precio,
 .section-cards-body section .precio {
   font-size: 1.2rem;
-  font-weight: 800;
-  color: #111827;
+  color: #4b5563;
   text-align: center;
   margin-bottom: 0.75rem;
   padding: 0.5rem;
@@ -110,14 +120,18 @@
   border: 1px solid #e5e7eb;
 }
 
-.producto-info .stock { color: #111827; font-weight: 700; }
 .producto-info .marca,
 .producto-info .categoria,
 .section-cards-body section .marca,
 .section-cards-body section .categoria {
   color: #4b5563;
 }
-.producto-info .detalles { color: #4b5563; font-style: italic; }
+
+.producto-info .detalles {
+  color: #4b5563;
+  
+}
+
 .producto-info .envio {
   color: #4b5563;
   margin-top: 0.5rem;
@@ -149,10 +163,11 @@
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.2);
 }
+
 .btn-comprar:hover,
 .section-cards-body section button.agregar-carrito:hover {
   background: rgba(255, 255, 255, 0.2);
-  border-color:rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-1px);
 }
 
@@ -163,8 +178,9 @@
   color: #2563eb;
   border-color: #2563eb;
 }
+
 .section-cards-body section button.ver-detalle:hover {
-  background: rgba(37,99,235,0.08);
+  background: rgba(37, 99, 235, 0.08);
 }
 
 .features-section {
@@ -173,8 +189,9 @@
   border-radius: 14px;
   margin-bottom: 3rem;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
+
 .features-section h2 {
   text-align: center;
   color: #111827;
@@ -182,26 +199,31 @@
   font-size: 1.75rem;
   font-weight: 800;
 }
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.25rem;
 }
+
 .feature-item {
   text-align: center;
   padding: 1rem;
 }
+
 .feature-item i {
   font-size: 2.5rem;
   color: #2563eb;
   margin-bottom: 0.75rem;
 }
+
 .feature-item h3 {
   color: #111827;
   margin-bottom: 0.5rem;
   font-size: 1.15rem;
   font-weight: 800;
 }
+
 .feature-item p {
   color: #4b5563;
   line-height: 1.6;
@@ -209,12 +231,29 @@
 }
 
 @media (max-width: 768px) {
-  .hero-section { padding: 2.5rem 1rem; }
-  .hero-section h1 { font-size: 1.75rem; }
+  .hero-section {
+    padding: 2.5rem 1rem;
+  }
 
-  .section-cards-header { padding: 1rem; }
-  .section-cards-header h1 { font-size: 1.5rem; }
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
 
-  .section-cards-body { grid-template-columns: 1fr; gap: 1rem; }
-  .features-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .section-cards-header {
+    padding: 1rem;
+  }
+
+  .section-cards-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .section-cards-body {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
