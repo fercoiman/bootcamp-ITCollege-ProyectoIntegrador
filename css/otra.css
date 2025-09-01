@@ -161,7 +161,7 @@ main h1 {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid white;
-    box-shadow: var(--shadow-sm);
+    
 }
 
 .testimonial-author .author-info h4 {
@@ -176,7 +176,6 @@ main h1 {
     font-weight: 500;
 }
 
-/* Sección de llamada a la acción */
 .cta-section {
     background: #27374D;
     color: white;
@@ -290,7 +289,6 @@ main h1 {
     }
 }
 
-/* Animaciones */
 @keyframes slideInUp {
     from {
         opacity: 0;
@@ -302,24 +300,6 @@ main h1 {
         transform: translateY(0);
     }
 }
-
-.features-section {
-    animation: slideInUp 0.8s ease-out;
-}
-
-.stats-section {
-    animation: slideInUp 0.8s ease-out 0.2s both;
-}
-
-.testimonials-section {
-    animation: slideInUp 0.8s ease-out 0.4s both;
-}
-
-.cta-section {
-    animation: slideInUp 0.8s ease-out 0.6s both;
-}
-
-/* Hover */
 .feature-card:hover i {
     transform: scale(1.1);
 }

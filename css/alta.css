@@ -69,9 +69,9 @@ main h1 {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #4b5563;
   outline-offset: 2px;
-  border-color: #2563eb;
+  border-color: #4b5563;
 }
 
 .form-submit {
@@ -84,7 +84,7 @@ main h1 {
   min-width: 180px;
 }
 
-/* Tabla de productos */
+
 .productos-tabla {
   margin-top: 3rem;
   border: 1px solid #e5e7eb;
@@ -125,7 +125,7 @@ main h1 {
   border-bottom: none;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   main { padding: 1rem; }
   .alta-form { padding: 1.5rem; }

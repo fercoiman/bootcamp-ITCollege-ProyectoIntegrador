@@ -12,7 +12,7 @@ main h1 {
   color: #ffffff;
 }
 
-.hero-section {
+.main-section {
   background:  #f5f7fb;
   color: #111827;
   text-align: center;
@@ -22,14 +22,14 @@ main h1 {
   border: 1px solid #e5e7eb;
 }
 
-.hero-section h2 {
+.main-section h2 {
   margin: 0 0 0.75rem 0;
   font-size: 1.75rem;
   font-weight: 800;
   color: #111827;
 }
 
-.hero-section p {
+.main-section p {
   font-size: 1.05rem;
   margin: 0 auto;
   max-width: 65ch;
@@ -38,7 +38,6 @@ main h1 {
 
 .valores-section,
 .equipo-section,
-.historia-section,
 .contacto-section {
   background: #ffffff;
   padding: 2rem 1.5rem;
@@ -50,9 +49,8 @@ main h1 {
 
 .valores-section h2,
 .equipo-section h2,
-.historia-section h2,
 .contacto-section h2 {
-  background: #172737;
+  background: #4b5563;
   color: #ffffff;
   padding: 0.875rem 1rem;
   margin: -2.0rem -1.5rem 1rem -1.5rem;
@@ -95,7 +93,6 @@ main h1 {
   margin: 0;
 }
 
-/* Equipo */
 .equipo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -185,25 +182,6 @@ main h1 {
   }
 }
 
-.hero-section {
-  animation: fadeInUp .35s ease-out;
-}
-
-.valores-section {
-  animation: fadeInUp .45s ease-out;
-}
-
-.equipo-section {
-  animation: fadeInUp .55s ease-out;
-}
-
-.historia-section {
-  animation: fadeInUp .65s ease-out;
-}
-
-.contacto-section {
-  animation: fadeInUp .75s ease-out;
-  }
 
 @media (max-width: 768px) {
   main {
@@ -212,23 +190,7 @@ main h1 {
 
   .valores-section,
   .equipo-section,
-  .historia-section,
   .contacto-section {
     padding: 1.25rem;
-  }
-
-  /* Timeline a una columna */
-  .timeline::before {
-    left: 20px;
-  }
-
-  .timeline-item {
-    width: 100%;
-    left: 0 !important;
-    margin-left: 40px;
-  }
-
-  .timeline-item::before {
-    left: -28px !important;
   }
 }
