@@ -5,10 +5,10 @@ main {
 }
 
 main h1 {
-    color: #27374D;
+    
     text-align: center;
-    font-size: 2.5rem;
-    background: #172737;
+    font-size: 2rem;
+    background: #4b5563;
     color: #FFFFFF;
     padding: 1.5rem 2rem;
     border-radius: 12px;
@@ -78,17 +78,16 @@ main h1 {
     border-color: var(--error-color);
 }
 
-/* Campo de textarea */
+
 .form-group textarea {
     min-height: 120px;
     resize: vertical;
 }
 
-/* Botón de envío */
 .contacto-form button {
-    background: #172737;
+    background: #4b5563;
     color: #FFFFFF;
-    width: 100%;
+    width: 80%;
     padding: 1.25rem;
     border: none;
     border-radius: 12px;
